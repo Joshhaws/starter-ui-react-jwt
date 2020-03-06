@@ -12,6 +12,7 @@ export const registerUser = user => {
       if (data.errors) {
         return data.errors
       } else {
+        // pass success message to next view
         window.location.href = '/';
       }
     })
@@ -30,8 +31,9 @@ export const loginUser = user => {
     .then(resp => resp.json())
     .then(data => {
       if (data.errors) {
-        console.log(data.errors);
+        return data.errors
       } else {
+        // set jwt
         window.location.href = '/landing';
       }
     })
