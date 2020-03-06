@@ -22,9 +22,9 @@ class Register extends Component {
 
   render() {
     return (
-      <div className="w-full max-w-md">
-        <form onSubmit={this.handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <h1 className="text-3xl mb-8">Sign Up</h1>
+      <div className="w-full max-w-lg">
+        <form onSubmit={this.handleSubmit} className="bg-white shadow-md rounded px-12 pt-6 pb-8 mb-4">
+          <h1 className="text-3xl mb-8 font-bold">Sign Up</h1>
 
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2 flex">Email</label>
@@ -49,7 +49,7 @@ class Register extends Component {
             />
           </div>
           
-          <div className="mb-6">
+          <div className="mb-8">
             <label className="block text-gray-700 text-sm font-bold mb-2 flex">Username</label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -60,8 +60,12 @@ class Register extends Component {
             />
           </div>
 
-          <div>
-            <input className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" type='submit' />
+          <div className="mb-2">
+            <input className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-12 rounded-full cursor-pointer" type='submit' />
+          </div>
+
+          <div className="mb-4 text-sm">
+            <a href="" className="hover:underline">Back to Login</a>
           </div>
          
         </form>
