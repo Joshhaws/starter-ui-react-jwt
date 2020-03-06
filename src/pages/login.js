@@ -19,6 +19,7 @@ class Login extends Component {
     event.preventDefault()
     let res = loginUser(this.state)
 
+    
     this.setState({
       error: res
     })
@@ -30,7 +31,7 @@ class Login extends Component {
         <form onSubmit={this.handleSubmit} className="bg-white shadow-md rounded px-12 pt-6 pb-8 mb-4">
           <h1 className="text-3xl mb-8 font-bold">Log In</h1>
           {this.state.error &&
-            <p className="text-red-600">Error</p>
+            <p className="text-red-600">Invalid Email or Password</p>
           }
 
           <div className="mb-6">

@@ -32,7 +32,7 @@ export const loginUser = user => {
       if (data.errors) {
         console.log(data.errors);
       } else {
-        window.location.href = '/';
+        window.location.href = '/landing';
       }
     })
 }

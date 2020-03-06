@@ -17,7 +17,7 @@ class ForgotPassword extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log('test');
+    window.location.href = '/';
   }
 
   render() {
