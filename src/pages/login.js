@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import {loginUser} from '../services/auth-service/auth-service';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
   state = {
@@ -16,7 +17,11 @@ class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    loginUser(this.state)
+    let res = loginUser(this.state)
+
+    this.setState({
+      error: res
+    })
   }
 
   render() {
@@ -24,6 +29,9 @@ class Login extends Component {
       <div className="w-full max-w-lg">
         <form onSubmit={this.handleSubmit} className="bg-white shadow-md rounded px-12 pt-6 pb-8 mb-4">
           <h1 className="text-3xl mb-8 font-bold">Log In</h1>
+          {this.state.error &&
+            <p className="text-red-600">Error</p>
+          }
 
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2 flex">Email</label>
@@ -46,7 +54,8 @@ class Login extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-            <a href="" className="hover:underline text-xs self-end">Forgot Password?</a>
+            {/* <a  className="hover:underline text-xs self-end">Forgot Password?</a> */}
+            <Link to='/forgot-password' className="hover:underline text-xs self-end">Forgot Password?</Link>
           </div>
 
           <div className="mb-2">
@@ -54,7 +63,7 @@ class Login extends Component {
           </div>
 
           <div className="mb-4 text-sm">
-            <a href="" className="hover:underline">Create an Account</a>
+            <Link to='/register' className="hover:underline">Create an Account</Link>
           </div>
 
         </form>

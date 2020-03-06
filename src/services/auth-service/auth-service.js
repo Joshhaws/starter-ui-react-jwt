@@ -9,11 +9,16 @@ export const registerUser = user => {
   })
     .then(resp => resp.json())
     .then(data => {
-      console.log(data);
+      if (data.errors) {
+        return data.errors
+      } else {
+        window.location.href = '/';
+      }
     })
 }
 
 export const loginUser = user => {
+  console.log(JSON.stringify({user}))
   return fetch("http://localhost:4000/api/users/login", {
     method: "POST",
     headers: {
@@ -24,7 +29,11 @@ export const loginUser = user => {
   })
     .then(resp => resp.json())
     .then(data => {
-      console.log(data);
+      if (data.errors) {
+        console.log(data.errors);
+      } else {
+        window.location.href = '/';
+      }
     })
 }
 
