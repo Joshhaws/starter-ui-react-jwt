@@ -5,9 +5,9 @@ import Login from './pages/login';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App w-screen h-screen flex justify-center items-center bg-gray-300">
       <Register />
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 }

@@ -22,36 +22,51 @@ class Register extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1>Sign Up</h1>
+      <div className="w-full max-w-md">
+        <form onSubmit={this.handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <h1 className="text-3xl mb-8">Sign Up</h1>
 
-        <label>Email</label>
-        <input
-          name='email'
-          placeholder='Email'
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
+          <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-bold mb-2 flex">Email</label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name='email'
+              placeholder='Email'
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+          </div>
+          
+          <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-bold mb-2 flex">Password</label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type='password'
+              name='password'
+              placeholder='Password'
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
+          </div>
+          
+          <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-bold mb-2 flex">Username</label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name='username'
+              placeholder='Username'
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+          </div>
 
-        <label>Password</label>
-        <input
-          type='password'
-          name='password'
-          placeholder='Password'
-          value={this.state.password}
-          onChange={this.handleChange}
-        />
-        
-        <label>Username</label>
-        <input
-          name='username'
-          placeholder='Username'
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
+          <div>
+            <input className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" type='submit' />
+          </div>
+         
+        </form>
+      </div>
 
-        <input type='submit'/>
-      </form>
     )
   }
 }
