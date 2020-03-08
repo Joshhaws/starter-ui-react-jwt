@@ -19,7 +19,6 @@ class Login extends Component {
     event.preventDefault()
     let res = loginUser(this.state)
 
-    
     this.setState({
       error: res
     })

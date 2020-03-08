@@ -1,3 +1,13 @@
+export const authState = {
+  isAuthenticated() {
+    if (localStorage.getItem('token') === null) {
+      return false
+    } else {
+      return true
+    }
+  }
+}
+
 export const registerUser = user => {
   return fetch("http://localhost:4000/api/users", {
     method: "POST",
@@ -42,6 +52,5 @@ export const loginUser = user => {
 }
 
 export const logoutUser = user => {
-  console.log('log out');
-  localStorage. clear();
+  localStorage.clear();
 }
