@@ -55,7 +55,6 @@ class Login extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-            {/* <a  className="hover:underline text-xs self-end">Forgot Password?</a> */}
             <Link to='/forgot-password' className="hover:underline text-xs self-end">Forgot Password?</Link>
           </div>
 

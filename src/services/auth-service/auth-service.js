@@ -12,14 +12,13 @@ export const registerUser = user => {
       if (data.errors) {
         return data.errors
       } else {
-        // pass success message to next view
+        // pass success message to next view -- not entirely sure how to do this
         window.location.href = '/';
       }
     })
 }
 
 export const loginUser = user => {
-  console.log(JSON.stringify({user}))
   return fetch("http://localhost:4000/api/users/login", {
     method: "POST",
     headers: {
@@ -32,10 +31,17 @@ export const loginUser = user => {
     .then(data => {
       if (data.errors) {
         return data.errors
+        // need to improve json response from api
       } else {
-        // set jwt
-        window.location.href = '/landing';
+        localStorage.setItem("token", data.user.token)
+        // instead of redircting here in the service should we be having some kind of routing functionality that checks the localstorage token, and once there is one it redirect?
+        // some kind of authguard maybe?
+        // window.location.href = '/landing';
       }
     })
 }
 
+export const logoutUser = user => {
+  console.log('log out');
+  localStorage. clear();
+}

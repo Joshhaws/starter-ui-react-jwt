@@ -50,6 +50,8 @@ class Register extends Component {
             />
           </div>
           
+
+        {/* thinking of just removing username and going with email */}
           <div className="mb-8">
             <label className="block text-gray-700 text-sm font-bold mb-2 flex">Username</label>
             <input
