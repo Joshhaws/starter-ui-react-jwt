@@ -4,7 +4,7 @@ import { authState } from '../services/auth-service/auth-service'
 
 export const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    authState.isAuthenticated === true
+    authState.isAuthenticated() === true
       ? <Component {...props} />
       : <Redirect to='/' />
   )} />

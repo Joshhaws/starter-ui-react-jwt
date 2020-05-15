@@ -34,7 +34,7 @@ class Navbar extends Component {
           <div>
             { authState.isAuthenticated()
               ? <button onClick={this.handleClick} className="inline-block text-sm px-4 py-2 leading-none rounded-full border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 lg:mt-0">Logout</button>
-              : <Link to="/" className="inline-block text-sm px-4 py-2 leading-none rounded-full border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 lg:mt-0">Login</Link>
+              : <Link to="/" className="inline-block text-sm px-4 py-2 leading-none rounded-full border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 lg:mt-0 transition ease-in duration-200">Login</Link>
             }
           </div>
         </div>

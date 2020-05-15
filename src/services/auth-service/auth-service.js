@@ -53,4 +53,5 @@ export const loginUser = user => {
 
 export const logoutUser = user => {
   localStorage.clear();
+  window.location.href = '/';
 }

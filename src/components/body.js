@@ -6,6 +6,7 @@ import Landing from '../pages/landing';
 import { PrivateRoute } from '../components/private-route'
 import { Route, Switch } from 'react-router-dom';
 
+
 class Body extends Component {  
 
   render() {
