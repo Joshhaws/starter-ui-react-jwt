@@ -7,22 +7,37 @@ import SubmitButton from '../components/submit-button.js'
 export function Login() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [showError, setShowError] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault()
   }
 
   const login = () => {
-    console.log('test');
+    setLoading(true)
+    
+    if (true) {
+      // redirect
+      window.location.href = '/landing';
+    } else {
+      setTimeout(() => {
+        setShowError(!showError);
+        setError('There was an error');
+        setLoading(false)
+      }, 1000);
+    }
   }
 
   return (
     <div className="w-full max-w-lg">
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-12 pt-6 pb-8 mb-4">
         <h1 className="text-3xl mb-8 font-bold">Log In</h1>
-        {/* {loading &&
-          <p className="text-red-600">Invalid Email or Password</p>
-        } */}
+        {showError &&
+          <p className="text-red-600">{error}</p>
+        }
 
         <div className="mb-6">
           <label className="block text-gray-700 text-sm font-bold mb-2 flex">Email</label>
@@ -49,7 +64,7 @@ export function Login() {
         </div>
 
         <div className="mb-2">
-          <SubmitButton passedFunction={login} />
+          <SubmitButton passedFunction={login} passedLoading={loading} />
         </div>
 
         <div className="mb-4 text-sm">

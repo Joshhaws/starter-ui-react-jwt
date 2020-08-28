@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import SubmitButton from '../components/submit-button.js'
 
 export function ForgotPassword() { 
-  const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [showError, setShowError] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
@@ -29,7 +29,6 @@ export function ForgotPassword() {
         setLoading(false)
       }, 1000);
     }
-    
   }
 
   return (

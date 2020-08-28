@@ -3,7 +3,6 @@ import Loader from 'react-loader-spinner';
 
 
 export function SubmitButton(props) {
-  // const [loading, setLoading] = useState(props.passedLoading)
 
   const handleSubmit = () => {
     props.passedFunction()
