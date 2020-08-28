@@ -2,14 +2,11 @@
 import React, {Component} from 'react';
 // import { Link } from 'react-router-dom';
 
-class Landing extends Component {
+export function Landing() {
 
-  render() {
-    return (
-      <p>you've made it to the next level</p>
-    )
-  }
+  return (
+    <p>you've made it to the next level</p>
+  )
 }
-
 
 export default Landing;
