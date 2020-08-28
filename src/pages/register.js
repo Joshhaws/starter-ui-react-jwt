@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import {registerUser} from '../services/auth-service/auth-service';
+// import {registerUser} from '../services/auth-service/auth-service';
 import { Link } from 'react-router-dom';
 import SubmitButton from '../components/submit-button.js'
 
@@ -11,7 +11,7 @@ export function Register() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [showError, setShowError] = useState(false)
-  const [showSuccess, setShowSuccess] = useState(false)
+  // const [showSuccess, setShowSuccess] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault()

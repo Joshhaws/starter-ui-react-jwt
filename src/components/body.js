@@ -1,4 +1,4 @@
-import React, {Component}  from 'react';
+import React from 'react';
 import Register from '../pages/register';
 import Login from '../pages/login';
 import ForgotPassword from '../pages/forgot-password';

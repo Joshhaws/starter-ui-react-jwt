@@ -1,7 +1,7 @@
   
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { authState, logoutUser } from '../services/auth-service/auth-service'
+import { authState } from '../services/auth-service/auth-service'
 
 export function Navbar() {
 
